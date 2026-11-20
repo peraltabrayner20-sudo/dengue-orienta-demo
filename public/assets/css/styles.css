@@ -74,10 +74,6 @@ th,td{border-bottom:1px solid var(--borde);padding:6px 8px;text-align:left}
 @media (prefers-reduced-motion:no-preference){.boton{transition:background .15s}}
 @media (min-width:640px){.tarjeta{padding:28px}}
 
-/* Demostración estática */
-.demo{background:#fff8e1;border:1px solid #e0c36a;border-radius:8px;padding:.6rem .9rem;margin:0 0 1rem;font-size:.95rem}
-.pantalla[hidden]{display:none}
-
 /* ---- Versión 2: portada, menú, campos nuevos y panel ---- */
 .encabezado .menu{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:8px}
 .encabezado .menu a{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:3px;padding:4px 0}
