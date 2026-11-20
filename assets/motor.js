@@ -34,6 +34,15 @@
     throw new Error('Ninguna regla aplica: revise las reglas.');
   }
 
-  var api = { cumple: cumple, codigosDe: codigosDe, clasificar: clasificar };
+  // Condición de riesgo R a partir de las respuestas separadas (igual que Entrada::riesgo en PHP).
+  function riesgo(edad, embarazo, cronicas) {
+    return edad < 5 || edad >= 65 || embarazo === 'si' || cronicas.length > 0;
+  }
+
+  function grupoEdad(edad) {
+    return edad < 5 ? '0-4' : edad < 15 ? '5-14' : edad < 65 ? '15-64' : '65+';
+  }
+
+  var api = { cumple: cumple, codigosDe: codigosDe, clasificar: clasificar, riesgo: riesgo, grupoEdad: grupoEdad };
   if (typeof module !== 'undefined' && module.exports) { module.exports = api; } else { root.Motor = api; }
 })(typeof window !== 'undefined' ? window : globalThis);
