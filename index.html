@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orientación temprana de dengue · Demostración</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<header class="encabezado"><div class="contenedor">
+  <p class="marca">Orientación temprana de casos febriles compatibles con dengue</p>
+  <p class="sub">Valledupar, Cesar · Prototipo académico</p>
+  <nav class="menu" aria-label="Principal"><a href="index.html">Inicio</a><a href="index.html#evaluar">Evaluación</a><a href="panel.html">Panel de situación (ejemplo)</a></nav>
+</div></header>
+<main id="contenido" class="contenedor">
+  <p class="demo"><strong>Demostración en línea.</strong> Esta versión corre completamente en su navegador y no guarda ningún dato.</p>
+
+  <div class="pantalla" id="p-inicio">
+    <section class="tarjeta portada">
+      <p class="etiqueta-sec">Valledupar, Cesar</p>
+      <h1>¿Fiebre en casa? Sepa cuándo consultar por posible dengue</h1>
+      <p class="lead">Conteste unas preguntas cortas y reciba, en menos de dos minutos, una orientación según los signos de alarma y de gravedad del protocolo del Instituto Nacional de Salud, con un paso a paso de qué hacer.</p>
+      <p><button class="boton grande" type="button" id="comenzar">Comenzar la evaluación</button></p>
+      <p class="pequeno"><strong>Esto no es un diagnóstico.</strong> La herramienta orienta y no reemplaza la valoración médica. Si hay una emergencia, llame al 123.</p>
+    </section>
+    <section class="tarjeta" aria-labelledby="como">
+      <h2 id="como">Cómo funciona</h2>
+      <ol class="pasos-inicio">
+        <li><strong>Datos de la persona.</strong> Edad, días de fiebre, embarazo y enfermedades crónicas, que cambian la urgencia de consultar.</li>
+        <li><strong>Ubicación y entorno.</strong> Departamento, municipio y si hay agua estancada cerca. Nunca pedimos nombre, dirección ni teléfono.</li>
+        <li><strong>Señales de alarma y de gravedad.</strong> Preguntas de sí o no sobre dolor de barriga, vómito, sangrados, decaimiento y señales de choque.</li>
+        <li><strong>Resultado y paso a paso.</strong> Una de tres orientaciones, las señales que la activaron y qué hacer ahora.</li>
+      </ol>
+    </section>
+    <section class="tarjeta" aria-labelledby="panel">
+      <h2 id="panel">Panel de situación</h2>
+      <p>Las evaluaciones anónimas se resumen por municipio, grupo de edad y entorno, solo con conteos agrupados. <a href="panel.html">Ver el panel de ejemplo</a> (datos sintéticos).</p>
+    </section>
+  </div>
+
+  <section class="tarjeta pantalla" id="p-aviso" hidden>
+    <h1>Antes de empezar</h1>
+    <p><strong>Finalidad.</strong> Esta herramienta le orienta sobre cuándo consultar si usted, o una persona a su cuidado, tiene fiebre compatible con dengue. <strong>No diagnostica.</strong></p>
+    <ul>
+      <li>No le pedimos nombre, cédula, dirección exacta, barrio, teléfono ni correo.</li>
+      <li>Le preguntamos la edad, el departamento y el municipio donde vive y algunos datos del entorno para orientarle mejor.</li>
+      <li>Sus respuestas son <strong>anónimas y voluntarias</strong>; en esta demostración no se guarda nada.</li>
+      <li>Los datos de salud son sensibles (Ley 1581 de 2012): usted puede dejar de responder en cualquier momento.</li>
+    </ul>
+    <p class="error" id="error-aviso" role="alert" hidden>Para continuar debe aceptar el tratamiento de sus respuestas.</p>
+    <p class="check"><input type="checkbox" id="acepto"> <label for="acepto">Acepto el tratamiento de mis respuestas con esta finalidad.</label></p>
+    <button class="boton" type="button" id="aceptar">Continuar</button>
+  </section>
+
+  <section class="tarjeta pantalla" id="p-evaluacion" hidden>
+    <h1>Evaluación de la persona con fiebre</h1>
+    <p>Responda por usted o por la persona a su cuidado (por ejemplo, un niño). Son cinco pasos cortos.</p>
+    <p class="progreso" id="progreso" aria-live="polite"></p>
+    <div id="contenido-paso"></div>
+    <p class="error mensaje-paso" id="mensaje-paso" role="alert" hidden></p>
+    <div class="nav">
+      <button type="button" class="boton sec" id="atras">Atrás</button>
+      <button type="button" class="boton" id="siguiente">Siguiente</button>
+      <button type="button" class="boton" id="ver">Ver resultado</button>
+    </div>
+  </section>
+
+  <section class="tarjeta pantalla" id="p-resultado" hidden><div id="resultado-contenido"></div></section>
+</main>
+<footer class="pie"><div class="contenedor">
+  <p><strong>Esta herramienta orienta; no diagnostica ni sustituye la valoración médica.</strong>
+  Si la persona empeora o tiene dudas, consulte a un profesional de la salud. En una emergencia llame al 123.</p>
+  <p class="pequeno">Proyecto de grado · Ingeniería de Sistemas · UNAD. Prototipo en validación.</p>
+</div></footer>
+<script src="assets/reglas.js"></script>
+<script src="assets/motor.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
