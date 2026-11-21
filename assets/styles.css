@@ -130,4 +130,20 @@ details.datos summary{cursor:pointer;font-weight:600;color:var(--primario)}
 .sem{display:flex;align-items:flex-end;gap:6px;height:120px;margin:8px 0}
 .acciones-panel{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
 @media (max-width:480px){.barras li{grid-template-columns:minmax(80px,8em) 1fr 2.8em}}
-@media print{.encabezado .menu,.acciones-panel,.nav,.boton{display:none}}
+.solo-imprimir{display:none}
+.acciones-resultado{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:12px}
+.acciones-resultado form{margin:0}
+.acerca h2{margin-top:1.4em}
+.tabla-acerca{border-collapse:collapse;width:100%}
+.tabla-acerca th,.tabla-acerca td{border:1px solid var(--borde,#cfd8dc);padding:8px 10px;text-align:left;vertical-align:top}
+@media print{
+  .encabezado .menu,.acciones-panel,.nav,.boton,.acciones-resultado,.sin-imprimir,.salto,.pie a{display:none!important}
+  .solo-imprimir{display:block;font-size:.85rem;margin:0 0 12px}
+  body{background:#fff;color:#000}
+  .tarjeta{box-shadow:none;border:0;padding:0}
+  .resultado,.urgencia,li,.no-diagnostica{break-inside:avoid}
+  .pie{background:#fff;border-top:1px solid #000}
+  .encabezado{background:#fff;color:#000;border-bottom:2px solid #000}
+  .encabezado *{color:#000!important}
+  a{color:#000;text-decoration:none}
+}

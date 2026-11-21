@@ -139,7 +139,8 @@
     R.signos.forEach(function (s) { presentes[s.codigo] = estado[s.codigo] === 'si'; });
     var res = M.clasificar(R, presentes);
     var id = res.id_clase, clase = { 1: 'sin', 2: 'alarma', 3: 'grave' }[id], icono = { 1: '●', 2: '▲', 3: '■' }[id];
-    var h = '';
+    var ahora = new Date();
+    var h = '<p class="solo-imprimir">Orientación generada el ' + ahora.toLocaleDateString('es-CO') + ' ' + ahora.toLocaleTimeString('es-CO', { hour: '2-digit', minute: '2-digit' }) + ' con la herramienta de orientación temprana de casos febriles compatibles con dengue (Valledupar, Cesar). Demostración; no contiene datos de identificación.</p>';
     if (id === 3) { h += '<div class="urgencia" role="alert"><strong>URGENCIA INMEDIATA:</strong> ' + e(res.recomendacion) + '</div>'; }
     h += '<div class="resultado r-' + clase + '"><p class="etiqueta">Resultado de la orientación</p><h1><span aria-hidden="true">' + icono + '</span> ' + e(res.nombre) +
          '</h1><p class="urg">Nivel de atención: <strong>' + e(res.urgencia) + '</strong></p></div>';
@@ -189,9 +190,10 @@
         '<li>Piel fría, pálida o sudorosa, dificultad para respirar, confusión o convulsiones.</li></ul>';
     }
     h += '<p class="no-diagnostica"><strong>Importante:</strong> esto no es un diagnóstico. La herramienta solo orienta y no reemplaza la valoración médica.</p>';
-    h += '<p><a href="panel.html">Ver el panel de situación (ejemplo con datos sintéticos)</a></p><button class="boton" type="button" id="nueva">Nueva evaluación</button>';
+    h += '<p><a href="panel.html">Ver el panel de situación (ejemplo con datos sintéticos)</a></p><div class="acciones-resultado"><button class="boton sec" type="button" id="imprimir">Imprimir o guardar en PDF</button><button class="boton" type="button" id="nueva">Nueva evaluación</button></div><p class="pequeno sin-imprimir">Puede llevar esta hoja al centro de salud. No incluye su nombre ni otros datos de identificación.</p>';
     $('resultado-contenido').innerHTML = h;
     $('nueva').addEventListener('click', reiniciar);
+    $('imprimir').addEventListener('click', function () { window.print(); });
     mostrarPantalla('p-resultado');
   }
 

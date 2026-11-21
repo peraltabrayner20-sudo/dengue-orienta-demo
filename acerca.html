@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Acerca de · Orientación temprana de dengue</title>
+<meta name="description" content="Prototipo académico que orienta sobre cuándo consultar por fiebre compatible con dengue en Valledupar, Cesar, según el protocolo del INS. No diagnostica.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<header class="encabezado"><div class="contenedor">
+  <p class="marca">Orientación temprana de casos febriles compatibles con dengue</p>
+  <p class="sub">Valledupar, Cesar · Prototipo académico</p>
+  <nav class="menu" aria-label="Principal"><a href="index.html">Inicio</a><a href="index.html#evaluar">Evaluación</a><a href="panel.html">Panel de situación (ejemplo)</a><a href="acerca.html">Acerca de</a></nav>
+</div></header>
+<main id="contenido" class="contenedor">
+  <p class="demo"><strong>Demostración en línea.</strong> Esta versión corre completamente en su navegador y no guarda ningún dato.</p>
+  <section class="tarjeta acerca">
+  <h1>Acerca de esta herramienta</h1>
+  <p>Es un prototipo académico que ayuda a una persona, o a quien cuida de ella, a decidir <strong>cuándo consultar</strong> cuando hay fiebre compatible con dengue. <strong>Orienta; no diagnostica</strong> ni reemplaza la valoración de un profesional de la salud.</p>
+  <h2>De dónde salen las reglas</h2>
+  <p>La clasificación sigue el protocolo de vigilancia en salud pública del dengue del Instituto Nacional de Salud (INS, 2024) y las guías de la Organización Panamericana de la Salud (OPS, 2022). No usa inteligencia artificial: aplica reglas explícitas, de modo que cada resultado se puede explicar y revisar. Versión de reglas en uso: <strong>1</strong>.</p>
+  <h2>Cómo se decide el resultado</h2>
+  <table class="tabla-acerca">
+    <caption class="pequeno">Resumen de las tres orientaciones</caption>
+    <thead><tr><th scope="col">Si hay…</th><th scope="col">Orientación</th></tr></thead>
+    <tbody>
+      <tr><td>Al menos un signo de gravedad</td><td>Dengue grave: acudir de inmediato a urgencias o llamar al 123.</td></tr>
+      <tr><td>Signos de alarma y ninguno de gravedad</td><td>Dengue con signos de alarma: acudir hoy a un centro de salud.</td></tr>
+      <tr><td>Ningún signo</td><td>Dengue sin signos de alarma: hidratación, reposo y vigilancia. Con una condición de riesgo, consultar con un profesional.</td></tr>
+    </tbody>
+  </table>
+  <p>La edad, el embarazo y las enfermedades crónicas no cambian la clase, pero sí el mensaje cuando no hay señales.</p>
+  <h2>Qué datos se guardan</h2>
+  <ul>
+    <li>No se pide nombre, documento, dirección, barrio, teléfono ni correo.</li>
+    <li>En esta demostración no se guarda nada. En el prototipo completo solo se guarda el grupo de edad, el municipio, la zona y si hay agua estancada, para mostrar conteos agrupados.</li>
+    <li>El panel oculta las categorías con menos de 5 evaluaciones y <strong>no representa casos confirmados</strong>.</li>
+  </ul>
+  <h2>Límites</h2>
+  <p>El resultado depende de que las respuestas sean exactas. Los textos de recomendación son orientaciones informativas y están pendientes de revisión por un profesional de la salud. Si la persona empeora, consulte sin esperar.</p>
+  <h2>Quiénes la desarrollan</h2>
+  <p>Brayner Stedyn Peralta Cobo y Nayelis Daniela Mejia Barranco, estudiantes de Ingeniería de Sistemas de la Universidad Nacional Abierta y a Distancia (UNAD), como proyecto de grado.</p>
+  <p><a class="boton" href="index.html#evaluar">Comenzar la evaluación</a></p>
+  </section>
+</main>
+<footer class="pie"><div class="contenedor">
+  <p><strong>Esta herramienta orienta; no diagnostica ni sustituye la valoración médica.</strong>
+  Si la persona empeora o tiene dudas, consulte a un profesional de la salud. En una emergencia llame al 123.</p>
+  <p class="pequeno">Proyecto de grado · Ingeniería de Sistemas · UNAD. Prototipo en validación. <a href="acerca.html">Acerca de esta herramienta</a></p>
+</div></footer>
+
+</body>
+</html>
