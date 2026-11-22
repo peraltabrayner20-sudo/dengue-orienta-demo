@@ -1,5 +1,7 @@
 # Demostración en línea · Orientación temprana de casos febriles compatibles con dengue (Valledupar)
 
+Enlace: https://peraltabrayner20-sudo.github.io/dengue-orienta-demo/
+
 Versión estática del prototipo del proyecto de grado (Ingeniería de Sistemas, UNAD). El motor de reglas del prototipo PHP
 (`src/Classifier.php`) está portado a JavaScript y corre completamente en el navegador: **no guarda ningún dato**.
 La orientación no es un diagnóstico y no reemplaza la valoración médica.
